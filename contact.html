@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Estimate | Elova Property Management</title>
+  <meta name="description" content="Request a maintenance estimate or repair from Elova Property Management. Fast response for homeowners, businesses, Airbnb hosts, and property managers." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231e4638'/><text x='50' y='64' text-anchor='middle' fill='white' font-size='48' font-family='Georgia'>E</text></svg>" />
+</head>
+<body>
+  <header class="site-header header-light" id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Elova Property Management home">
+        <span class="brand-mark">E</span>
+        <span class="brand-text">
+          <strong>Elova</strong>
+          <span>Property Management</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link is-active">Contact</a>
+        <a href="contact.html#estimate" class="btn btn-primary nav-cta">Request Estimate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div>
+          <p class="eyebrow reveal">Contact</p>
+          <h1 class="reveal reveal-delay-1">Tell us what needs attention.</h1>
+        </div>
+        <p class="reveal reveal-delay-2">
+          Share a few details about the property and the work. We’ll follow up with an estimate, recommended timeline, and next steps — typically within 24–48 hours.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="estimate">
+      <div class="container">
+        <div class="form-layout">
+          <aside class="contact-aside reveal">
+            <p class="eyebrow">Direct line</p>
+            <h2>Estimates, repairs, and maintenance requests.</h2>
+            <p>
+              Prefer to talk it through? Call or email us — especially for guest emergencies or multi-unit portfolios that need a custom plan.
+            </p>
+            <div class="contact-details">
+              <div>
+                <span>Email</span>
+                <a href="mailto:hello@elovaproperty.com">hello@elovaproperty.com</a>
+              </div>
+              <div>
+                <span>Phone</span>
+                <a href="tel:+18045550120">(804) 555-0120</a>
+              </div>
+              <div>
+                <span>Service area</span>
+                <strong>Richmond & surrounding communities</strong>
+              </div>
+              <div>
+                <span>Hours</span>
+                <strong>Mon–Sat · 8am–6pm<br />Emergency triage available</strong>
+              </div>
+            </div>
+          </aside>
+
+          <div class="form-card reveal reveal-delay-1">
+            <div class="form-success" id="formSuccess" role="status">
+              Thank you — your request has been received. An Elova specialist will follow up shortly with your estimate.
+            </div>
+            <h3>Request an estimate</h3>
+            <p>Fields marked help us scope accurately. Photos can be described for now; we’ll request uploads if needed.</p>
+
+            <form id="estimateForm" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" required placeholder="Jordan Lee" />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" />
+                </div>
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(804) 555-0120" />
+                </div>
+                <div class="field">
+                  <label for="clientType">I am a…</label>
+                  <select id="clientType" name="clientType" required>
+                    <option value="">Select one</option>
+                    <option value="homeowner">Homeowner</option>
+                    <option value="business">Business / commercial</option>
+                    <option value="airbnb">Airbnb / short-term rental host</option>
+                    <option value="manager">Property manager</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="serviceType">Request type</label>
+                  <select id="serviceType" name="serviceType" required>
+                    <option value="">Select one</option>
+                    <option value="repair">Repair</option>
+                    <option value="estimate">Project estimate</option>
+                    <option value="maintenance">Maintenance plan</option>
+                    <option value="turnover">Turnover / punch list</option>
+                    <option value="emergency">Urgent / guest impact</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="propertyCount">Properties involved</label>
+                  <select id="propertyCount" name="propertyCount">
+                    <option value="1">1 property</option>
+                    <option value="2-5">2–5 properties</option>
+                    <option value="6-15">6–15 properties</option>
+                    <option value="16+">16+ properties</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label for="address">Property address or area</label>
+                  <input id="address" name="address" type="text" placeholder="Street address or neighborhood" />
+                </div>
+                <div class="field full">
+                  <label for="message">Describe the work</label>
+                  <textarea id="message" name="message" required placeholder="What’s happening? Include rooms, urgency, and any photos you’ll send by email."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-arrow" style="width:100%; margin-top:1.25rem;">
+                Submit request
+              </button>
+              <p class="form-note">By submitting, you agree to be contacted about this estimate. No spam — just a clear response from Elova.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="section-head stacked">
+          <p class="eyebrow reveal">What happens next</p>
+          <h2 class="section-title reveal">A simple path from request to resolution.</h2>
+        </div>
+        <div class="process-track">
+          <article class="process-step reveal">
+            <h3>We review</h3>
+            <p>Our team reads your notes, flags urgency, and identifies the right trade or project lead.</p>
+          </article>
+          <article class="process-step reveal reveal-delay-1">
+            <h3>We estimate</h3>
+            <p>You’ll receive pricing and a recommended window — or a request for a quick site visit if needed.</p>
+          </article>
+          <article class="process-step reveal reveal-delay-2">
+            <h3>You approve</h3>
+            <p>Confirm the scope. We schedule around guests, tenants, or business hours.</p>
+          </article>
+          <article class="process-step reveal reveal-delay-3">
+            <h3>We deliver</h3>
+            <p>Work is completed cleanly, with documentation you can keep or share with owners.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-mark">E</span>
+          <h3>Elova Property Management</h3>
+          <p>Premium maintenance, repairs, and estimates for homeowners, businesses, Airbnb hosts, and property managers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html#repairs">Repairs</a>
+          <a href="services.html#estimates">Estimates</a>
+          <a href="services.html#maintenance">Maintenance plans</a>
+          <a href="contact.html#estimate">Request work</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:hello@elovaproperty.com">hello@elovaproperty.com</a>
+          <a href="tel:+18045550120">(804) 555-0120</a>
+          <a href="contact.html">Richmond & surrounding areas</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Elova Property Management. All rights reserved.</span>
+        <span>Maintenance · Repairs · Estimates</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
